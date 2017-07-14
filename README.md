@@ -56,10 +56,10 @@ Comment (CRUD):
 	body: <i>{}</i>,
 	response: <i>array with comment objects</i>
 	</pre>
---by date of posting:<pre>
-	path: <i>'/chat/{date(milliseconds)}'</i>,
+--all recivers:<pre>
+	path: <i>'/chat/{id}'</i>,
 	body: <i>{}</i>,
-	response: <i>object with comment info (with "\_id" - unique id from MongoDB and "dateOfPost" unique number millisecons of posting time)</i>
+	response: <i>array of comment objects with reciverId</i>
 	</pre>
 <b>UPDATE (by date of posting):</b><pre>
 	path: <i>'/chat/{date(milliseconds)}'</i>,
