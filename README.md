@@ -52,17 +52,17 @@ Comment (CRUD):
 	</pre>
 <b>READ:</b>
 --all chat:<pre>
-	path: <i>'/chat/',
-	body: <i>{},
+	path: <i>'/chat/'</i>,
+	body: <i>{}</i>,
 	response: <i>array with comment objects</i>
 	</pre>
 --by date of posting:<pre>
-	path: <i>'/chat/{date(milliseconds)}',
-	body: <i>{},
+	path: <i>'/chat/{date(milliseconds)}'</i>,
+	body: <i>{}</i>,
 	response: <i>object with comment info (with "\_id" - unique id from MongoDB and "dateOfPost" unique number millisecons of posting time)</i>
 	</pre>
 <b>UPDATE (by date of posting):</b><pre>
-	path: <i>'/chat/{date(milliseconds)}',
+	path: <i>'/chat/{date(milliseconds)}'</i>,
 	body: <i>{
 		senderId: 1,
 		reciverId: 2,
