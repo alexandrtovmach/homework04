@@ -1,5 +1,4 @@
 var Comment = require('../services/comment');
-var bodyParser = require('body-parser');
 
 
 exports.showAllComments = function (req, res) {

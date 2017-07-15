@@ -1,5 +1,4 @@
 var User = require('../services/user');
-var bodyParser = require('body-parser');
 
 
 exports.getAllUser = function (req, res) {

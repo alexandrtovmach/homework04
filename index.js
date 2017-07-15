@@ -1,10 +1,11 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var db = require('./db');
 var userService = require('./routes/user')
 var chatService = require('./routes/comment')
 
 var app = express();
-
+app.use(bodyParser.json({extended: true}))
 
 //here must be my page, if i have time
 //app.get('/', )
