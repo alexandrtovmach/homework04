@@ -5,7 +5,8 @@ var userService = require('./routes/user')
 var chatService = require('./routes/comment')
 
 var app = express();
-app.use(bodyParser.json({extended: true}))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 //here must be my page, if i have time
 //app.get('/', )
