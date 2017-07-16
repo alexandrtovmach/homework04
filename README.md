@@ -5,8 +5,8 @@ User (CRUD):
 <b>CREATE:</b><pre>
 	path: <i>'/users/'</i>,
 	body: <i>{
-		name: "Nikita Semenistyi",
-		email: "nikita.semenistyi@binary-studio.com",
+		name: "First User",
+		email: "user1@mail.com",
 		userId: 1
 	}</i>,
 	response: <i>object with user info (with "\_id" - unique id from MongoDB)</i>
@@ -26,8 +26,8 @@ User (CRUD):
 <b>UPDATE (by user id):</b><pre>
 	path: <i>'/users/{id}'</i>,
 	body: <i>{
-		name: "Darina Korotkih",
-		email: "daria@binary-studio.com",
+		name: "Second User",
+		email: "user2@mail.com",
 		userId: 1
 	}</i>,
 	response: <i>OK</i>
