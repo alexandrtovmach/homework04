@@ -2,14 +2,14 @@
  * Created by Alexandr on 16.07.2017.
  */
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 var userService = require('../controllers/user')
 var chatService = require('../controllers/comment')
 
-module.exports = function(app){
-    app.use('./routes/router');
-};
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 //user operations
 app.get('/users', userService.getAllUser)
@@ -35,6 +35,7 @@ app.put('/chat/:dateOfPost', chatService.editComment)
 
 app.delete('/chat/:dateOfPost', chatService.deleteComment)
 
-app.get('/chat/:id', chatService.showReciversById)
+app.get('/chat/contacts/:id', chatService.showReciversById)
 
 
+module.exports = app;

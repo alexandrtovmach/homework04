@@ -1,31 +1,31 @@
-var db = require('../db');
+var dbBridge = require('../repositories/bridge');
 
 exports.getAllUser = function (callback) {
-	db.get().collection('users').find().toArray(function (err, docs) {
+    dbBridge.findAllUsers(function (err, docs) {
 		callback(err, docs)
 	})
-}
+};
 
 exports.getUserById = function (id, callback) {
-	db.get().collection('users').findOne({ userId: id }, function (err, docs) {
-		callback(err, docs)
-	})
-}
+    dbBridge.findOneUser(id, function (err, docs) {
+        callback(err, docs)
+    })
+};
 
 exports.createUser = function (user, callback) {
-	db.get().collection('users').insert(user, function (err, docs) {
-		callback(err, docs)
-	})
-}
+    dbBridge.addOneUser(user, function (err, docs) {
+        callback(err, docs)
+    })
+};
 
 exports.updateUser = function (id, newUser, callback) {
-	db.get().collection('users').updateOne({userId: id}, newUser, function (err, docs) {
-		callback(err, docs)
-	})
-}
+    dbBridge.updateOneUser(id, newUser, function (err, docs) {
+        callback(err, docs)
+    })
+};
 
 exports.deleteUser = function (id, callback) {
-	db.get().collection('users').removeOne({userId: id}, function (err, docs) {
-		callback(err, docs)
-	})
+    dbBridge.removeOneUser(id, function (err, docs) {
+        callback(err, docs)
+    })
 }
